@@ -31,14 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'ttable',
-    'course',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ttable',
+    'course',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +114,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -142,6 +142,11 @@ JWT_AUTH = {
 
 APP_ID = ""      # 小程序ID
 APP_SECRET = ""
+
+AUTH_USER_MODEL = 'ttable.User'
+
+
+
 
 
 

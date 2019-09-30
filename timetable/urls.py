@@ -19,8 +19,7 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', include('ttable.urls')),
-    path('wechat/', views.serve),
-    path('user/info', views.get_wx_user_info),
+    path('account/', include('ttable.urls')),
+    path('course',include('course.urls') ),
 
 ]

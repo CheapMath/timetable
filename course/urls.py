@@ -1,10 +1,10 @@
 from django.urls import path #导入path方法
-from . import views #从本app目录导入views
+from course import views #从本app目录导入views
 
 urlpatterns = [
-    path('get_course', views.get_course),
-    path('add_course_package',views.add_course_package),
-    path('add_course',views.add_course),
-    path('modify_course',views.modify_course),
+    path('get_course', views.student_course.get_course),  #获取自定义时间课程
+    path('add_course_package',views.student_course.add_course_package), #添加课程包
+    path('add_course',views.student_course.add_course), #添加课程
+    path('modify_course',views.student_course.modify_course), #修改课程
 ]
 

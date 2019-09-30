@@ -9,6 +9,7 @@ class student_course:
 
 
     def __init__(self,data):
+        pass
     '''
     根据userid获取studentid
     '''
