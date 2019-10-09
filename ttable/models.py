@@ -24,7 +24,7 @@ class User(AbstractUser):
     avatar_url = models.CharField(max_length=50, default="", null=True, blank=True, verbose_name="头像")
     openid = models.CharField(max_length=64, db_index=True, verbose_name='openid')
     #新增参数
-    cellphone=models.IntegerField(verbose_name="手机号")
+    cellphone=models.CharField(max_length=20,verbose_name="手机号")
     created_time = models.DateTimeField(auto_now=True, editable=False, verbose_name="创建时间")
 
     def __str__(self):
@@ -101,6 +101,10 @@ class Student_USER(models.Model):
 
 
 class WechatLoginView(APIView):
+
+
+
+
     """
     微信登录逻辑
     """

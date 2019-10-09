@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'guardian',    #django-guardian权限扩展模块
     'ttable',
     'course',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -144,6 +149,13 @@ APP_ID = ""      # 小程序ID
 APP_SECRET = ""
 
 AUTH_USER_MODEL = 'ttable.User'
+
+
+#django-guardian权限模块要求新增
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend', # default
+    'guardian.backends.ObjectPermissionBackend',
+)
 
 
 
